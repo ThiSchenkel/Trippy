@@ -9,13 +9,13 @@ class NavBar extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-          <div class="container-fluid">
-            <Link class="navbar-brand" to="/HomePage">
+        <nav className="navbar navbar-expand-md navbar-light bg-light">
+          <div className="container-fluid">
+            <Link className="navbar-brand" to="/HomePage">
               Trippy
             </Link>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
@@ -25,24 +25,24 @@ class NavBar extends React.Component {
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
                   <Link className="nav-link active" to="/Hotels/">
-                    Hotel
+                    Hotels
                   </Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="/Resturants/">
-                    Resturants
+                  <Link className="nav-link" to="/Restaurants/">
+                    Restaurants
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link className="nav-link" to="/Login/">
                     Login
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link className="nav-link" to="/Signup/">
                     Signup
                   </Link>
@@ -58,7 +58,7 @@ class NavBar extends React.Component {
           <Route path="/Hotels/">
             <Hotels />
           </Route>
-          <Route path="/Resturants/">
+          <Route path="/Restaurants/">
             <Hotels />
           </Route>
           <Route path="/Login/">

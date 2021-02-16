@@ -21,7 +21,7 @@ class Home extends React.Component {
 
   render() {
     if (this.state.cities.length === 0) {
-      return <p>empty</p>;
+      return (<p>empty</p>);
     } else if (this.state.cities.length >= 1) {
       this.state.cities.map((ville) => {
         return (
@@ -39,5 +39,4 @@ class Home extends React.Component {
     }
   }
 }
-
 export default Home;
