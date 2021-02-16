@@ -9,8 +9,8 @@ getHomeData(){
     const url = `${config.host}/api/home`;
     return fetch(url)
         .then(res => res.json())
-        .then(res => ({
-             cities: res.cities }))
+        .then(res => {
+           return res.cities })
             ;
 }
        

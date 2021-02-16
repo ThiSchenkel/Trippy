@@ -15,28 +15,27 @@ class Home extends React.Component {
       this.setState({
         cities: villes,
       });
-      console.log(this.state.cities, "cities");
+      console.log(this.state.cities, "state");
     });
   }
 
   render() {
     if (this.state.cities.length === 0) {
-      return <p>empty</p>;
-    } else if (this.state.cities.length >= 1) {
-      this.state.cities.map((ville) => {
-        return (
-          <div>
-            <CityCard name={ville.name} slug={ville.slug} src={ville.source} />
-          </div>
-        );
-      });
-    } else {
-      return (
-        <div>
-          <h1>Découvrir le monde</h1>
-        </div>
-      );
+      return <h1>y a rien </h1>;
     }
+    return (
+      <div>
+        {this.state.cities.map((ville) => {
+          return (
+            <CityCard
+              src={ville.source}
+              slug={ville.slug}
+              name={ville.name}
+            ></CityCard>
+          );
+        })}
+      </div>
+    );
   }
 }
 
