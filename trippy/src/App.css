@@ -1,32 +1,4 @@
-body {
-    font-family:  'Montserrat', sans-serif;
-    color : #2a2a2a;
-}
-
-.color{
-    background-color: #cccccc ;
-
-}
-
-.navBar{
-    color : #00a64a;
-    font-size: 50px;
-}
-
-.neutral_color {
-    color : #767676;
-}
-
-.action_color{
-    color : #ff5a5f;
-}
-
-.textSize{
-    font-size: 16px ;
-    caption-side: 14px;
-}
-
-.titleSize{
-    font-size: 22px;
-}
+.App {
+    text-align: center;
+  }
 

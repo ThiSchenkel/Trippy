@@ -4,6 +4,13 @@ import Home from "../views/Home";
 import Hotels from "../views/Hotels";
 import Login from "../views/Login";
 import Signup from "../views/Signup";
+import "./App.css";
+import styled from "styled-components";
+
+
+const StyleNavBar = styled.navBar
+  `background-color : #00a64a;
+color :#767676 `
 
 class NavBar extends React.Component {
   render() {
@@ -23,7 +30,7 @@ class NavBar extends React.Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">

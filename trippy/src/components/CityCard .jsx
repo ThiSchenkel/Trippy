@@ -1,12 +1,14 @@
 import React from "react";
-// import "./App.css";
+// import styled from "styled-components";
+// import style from "../style/style";
+
+
+
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 
 
 class CityCard extends React.Component {
-
-
 
   render() {
     return (

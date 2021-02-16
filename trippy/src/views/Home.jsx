@@ -1,5 +1,6 @@
 import React from "react";
-// import './App.css';
+import styled from "styled-components";
+import style from "../style/style";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Api from "../utils/Api";
 import CityCard from "../components/CityCard ";
