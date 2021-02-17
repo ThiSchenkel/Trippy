@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Api from './utils/Api';
 import Home from './views/Home';
 import NavBar from "./components/NavBar";
