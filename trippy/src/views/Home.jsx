@@ -1,17 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+import style from "../style/style";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Api from "../utils/Api";
+import getHomeData from "../utils/Api";
 import CityCard from "../components/CityCard ";
 
 class Home extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       cities: [],
     };
   }
+
   componentDidMount() {
-    Api.getHomeData().then((villes) => {
+    getHomeData().then((villes) => {
       this.setState({
         cities: villes,
       });
