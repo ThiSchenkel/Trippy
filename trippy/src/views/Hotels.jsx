@@ -12,7 +12,7 @@ class Hotels extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:3002/api/hotels/city/london`)
+    fetch(`http://localhost:3002/api/hotels/city/${this.props.match.params.city}`)
       .then((response) => response.json())
       .then((data) => {
         this.setState({

@@ -5,8 +5,7 @@ class CityCard extends React.Component {
   render() {
     const src = "http://localhost:3002" + this.props.src;
     return (
-      <BrowserRouter>
-        <Link to={`/Hotels/${this.props.slug}`}>
+      
           <div>
             <img
               style={{ width: "300px" }}
@@ -18,8 +17,7 @@ class CityCard extends React.Component {
               <span>Location :</span> {this.props.name}
             </p>
           </div>
-        </Link>
-      </BrowserRouter>
+        
     );
   }
 }

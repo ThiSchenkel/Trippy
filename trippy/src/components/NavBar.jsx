@@ -81,8 +81,7 @@ class NavBar extends React.Component {
           <Route path="/HomePage/">
             <Home />
           </Route>
-          <Route path="/Hotels/">
-            <Hotels />
+          <Route path="/Hotels/:city" component={Hotels}>
           </Route>
           <Route path="/Restaurants/">
             <Hotels />

@@ -1,7 +1,7 @@
 import React from "react";
 //import styled from "styled-components";
 //import style from "../style/style";
-// import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import getHomeData from "../utils/Api";
 import CityCard from "../components/CityCard";
 
@@ -27,11 +27,14 @@ class Home extends React.Component {
       <div>
         {this.state.cities.map((ville) => {
           return (
-            <CityCard
-              src={ville.source}
-              slug={ville.slug}
-              name={ville.name}
-            ></CityCard>
+
+            <Link to={"/Hotels/" + ville.slug}>
+              <CityCard
+                src={ville.source}
+                slug={ville.slug}
+                name={ville.name}
+              ></CityCard>
+            </Link>
           );
         })}
       </div>
