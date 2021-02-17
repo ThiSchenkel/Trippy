@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import Api from './utils/Api';
-import Home from './views/Home';
+//import styled from "styled-components";
+
 import NavBar from "./components/NavBar";
 import './App.css';
 
@@ -19,4 +18,3 @@ class App extends React.Component {
 }
 
 export default App;
-// import { BrowserRouter, Switch, Route, Link } from "react-router-dom";

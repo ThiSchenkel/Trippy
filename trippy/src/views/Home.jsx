@@ -1,12 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import style from "../style/style";
+//import styled from "styled-components";
+//import style from "../style/style";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import getHomeData from "../utils/Api";
+import Api from "../utils/Api";
 import CityCard from "../components/CityCard ";
 
 class Home extends React.Component {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +14,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    getHomeData().then((villes) => {
+    Api.getHomeData().then((villes) => {
       this.setState({
         cities: villes,
       });

@@ -1,6 +1,6 @@
 import React from "react";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Api from "../utils/Api";
+//import Api from "../utils/Api";
 
 class Hotels extends React.Component {
   constructor(props) {

@@ -1,10 +1,20 @@
-const config = {
-    host: "http://localhost:3002"
-}
 
-const getHomeData = () => {
-    return fetch(config.host + "/api/home")
-        .then(response => response.json())
-}
+ const config = {
+    host: "http://localhost:3002",
+    };
 
-export default {config, getHomeData};
+class Api{
+   
+getHomeData(){
+    const url = `${config.host}/api/home`;
+    return fetch(url)
+        .then(res => res.json())
+        .then(res => {
+           return res.cities })
+            ;
+}
+       
+}
+export default new  Api()
+
+
