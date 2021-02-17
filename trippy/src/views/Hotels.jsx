@@ -1,6 +1,6 @@
 import React from "react";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-//import Api from "../utils/Api";
+import HotelCard from "../components/HotelCard";
 
 class Hotels extends React.Component {
   constructor(props) {
@@ -8,26 +8,34 @@ class Hotels extends React.Component {
 
     this.state = {
       hotels: [],
-      city: [],
     };
   }
 
-  //componentDidMount() {
-  //  fetch(`http://localhost:3002/api/hotels/city/${slug}`)
-  //    .then((response) => response.json())
-  //    .then((data) => {
-  //      this.setState({
-  //        hotels: data,
-  //      });
-  //      console.log(this.state.hotels, "state");
-  //    });
-  //}
+  componentDidMount() {
+    fetch(`http://localhost:3002/api/hotels/city/london`)
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          hotels: data.results,
+        });
+        console.log(this.state.hotels, "state");
+      });
+  }
 
   render() {
     return (
-      <>
-        <h1>Hotel</h1>
-      </>
+      <div>
+        {this.state.hotels.map((hotel) => {
+          return (
+            <HotelCard
+              pictures={hotel.pictures}
+              rating={hotel.stars}
+              name={hotel.name}
+              price={hotel.price}
+            ></HotelCard>
+          );
+        })}
+      </div>
     );
   }
 }

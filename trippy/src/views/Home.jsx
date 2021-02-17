@@ -4,7 +4,7 @@ import "../App.css";
 //import style from "../style/style";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import getHomeData from "../utils/Api";
-import CityCard from "../components/CityCard ";
+import CityCard from "../components/CityCard";
 
 class Home extends React.Component {
   constructor(props) {
