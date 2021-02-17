@@ -25,7 +25,7 @@ class Home extends React.Component {
 
   render() {
     if (this.state.cities.length === 0) {
-      return <h1>y a rien </h1>;
+      return <h1>Loading </h1>;
     }
     return (
       <div>
