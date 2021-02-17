@@ -27,8 +27,7 @@ class Home extends React.Component {
       <div>
         {this.state.cities.map((ville) => {
           return (
-
-            <Link to={"/Hotels/" + ville.slug}>
+            <Link to={"/Hotels/" + ville.slug} style={{ textDecoration: "none", color: "#767676", fontSize: "16px" }}>
               <CityCard
                 src={ville.source}
                 slug={ville.slug}
