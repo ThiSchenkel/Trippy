@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 //import styled from "styled-components";
 //import style from "../style/style";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
@@ -24,17 +25,24 @@ class Home extends React.Component {
       return <h1>Loading </h1>;
     }
     return (
-      <div>
-        {this.state.cities.map((ville) => {
-          return (
-            <CityCard
-              src={ville.source}
-              slug={ville.slug}
-              name={ville.name}
-            ></CityCard>
-          );
-        })}
-      </div>
+      <>
+        <div className="container">
+          <h1>Découvrir le monde</h1>
+          <div className="row">
+            <div className="col-sm-6 col-md-4 col-lg-3">
+              {this.state.cities.map((ville) => {
+                return (
+                  <CityCard
+                    src={ville.source}
+                    slug={ville.slug}
+                    name={ville.name}
+                  ></CityCard>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </>
     );
   }
 }
