@@ -1,6 +1,6 @@
 import React from "react";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import HotelCard from "../components/CityCard ";
+import HotelCard from "../components/HotelCard";
 
 class Hotels extends React.Component {
   constructor(props) {
