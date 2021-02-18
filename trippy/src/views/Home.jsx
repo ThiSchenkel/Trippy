@@ -1,8 +1,7 @@
 import React from "react";
-import "../App.css";
 //import styled from "styled-components";
 //import style from "../style/style";
-// import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import getHomeData from "../utils/Api";
 import CityCard from "../components/CityCard";
 
@@ -25,18 +24,19 @@ class Home extends React.Component {
       return <h1>Loading </h1>;
     }
     return (
-      <>
-        <div className="container">
-          <h1>Découvrir le monde</h1>
+      <div className="container">
+        <h1>Découvrir le monde</h1>
+        <div className="row">
           {this.state.cities.map((ville) => {
             return (
-              <CityCard src={ville.source} slug={ville.slug} name={ville.name}></CityCard>
-            );
+              (this.props.src === "/img/paris.png") ?
+                (<div className="col-sm-6 col-md-6 " ><CityCard src={ville.source} slug={ville.slug} name={ville.name}></CityCard></div>) :
+                (<div className="col-sm-12 col-md-4" > <CityCard src={ville.source} slug={ville.slug} name={ville.name}></CityCard></div>)
+            )
           })}
         </div>
-      </>
+      </div>
     );
   }
 }
-
 export default Home;

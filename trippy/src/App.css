@@ -1,5 +1,7 @@
 body {
   font-family: "Montserrat";
+  width: 100%;
+  
 }
 
 h1{
@@ -9,4 +11,8 @@ h1{
 
 img{
     width : 100%;
+}
+
+.container{
+  width: 100%;
 }

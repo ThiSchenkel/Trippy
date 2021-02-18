@@ -8,7 +8,7 @@ import Signup from "../views/Signup";
 import styled from "styled-components"; //installation du styled-components
 
 const StyleNavBar = styled.div`
-  background: #00a64a;
+  background: #990000;
   color: #767676;
 `;
 
@@ -21,7 +21,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="navbar navbar-expand-md navbar-light bg-light">
+        <div className="navbar navbar-expand-md navbar-light bg-light ">
           <StyleNavBar className="container-fluid">
             <Link
               className="navbar-brand"
