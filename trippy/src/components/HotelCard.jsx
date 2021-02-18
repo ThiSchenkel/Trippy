@@ -5,10 +5,18 @@ class HotelCard extends React.Component {
   render() {
     return (
       <div>
-        <img src={this.props.pictures} alt="" />
-        <p>{this.props.rating}</p>
-        <p>{this.props.price}</p>
-        <p>{this.props.name}</p>
+        <div>
+          <img
+            src={this.props.pictures}
+            alt={this.props.name}
+            style={{ width: "300px" }}
+          />
+        </div>
+        <div>
+          <p>{this.props.name}</p>
+          <p>{this.props.price}</p>
+          <p>{this.props.rating}</p>
+        </div>
       </div>
     );
   }
