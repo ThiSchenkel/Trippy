@@ -7,6 +7,8 @@ body {
 h1{
     color : #2a2a2a;
     font-weight: 400;
+    text-align: center;
+    padding: 30px;
 }
 
 img{
@@ -15,4 +17,8 @@ img{
 
 .container{
   width: 100%;
+}
+
+.navbar{
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }

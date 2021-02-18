@@ -1,5 +1,12 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import "../App.css";
+import styled from "styled-components";
+
+
+const StyleLinkP = styled.p`
+  color: #2a2a2a;
+  text-align : center;
+`;
 
 class CityCard extends React.Component {
   render() {
@@ -7,12 +14,10 @@ class CityCard extends React.Component {
     console.log(this.props.src);
     return (
       <>
-        <img src={src} class="card-img-top" alt={this.props.slug} />
-        <p class="card-text" ><span>{this.props.name}</span></p>
-
+        <StyleLinkP>{this.props.name}</StyleLinkP>
+        <img src={src} class="rounded shadow p-3 mb-5 bg-white" alt={this.props.slug} />
       </>
     );
   }
 }
-
 export default CityCard;

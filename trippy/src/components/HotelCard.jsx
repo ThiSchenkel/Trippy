@@ -4,12 +4,19 @@ import React from "react";
 class HotelCard extends React.Component {
   render() {
     return (
-      <div>
-        <img src={this.props.pictures} alt="" />
-        <p>{this.props.rating}</p>
-        <p>{this.props.price}</p>
+      <>
+        <img
+          src={this.props.pictures}
+          alt={this.props.name}
+          style={{ width: "300px" }}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "http://via.placeholder.com/300x200";
+          }} />
         <p>{this.props.name}</p>
-      </div>
+        <p>{this.props.price}</p>
+        <p>{this.props.rating}</p>
+      </>
     );
   }
 }

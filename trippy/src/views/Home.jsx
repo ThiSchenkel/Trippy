@@ -24,21 +24,19 @@ class Home extends React.Component {
       return <h1>Loading </h1>;
     }
     return (
+
       <div className="container">
         <h1>Découvrir le monde</h1>
         <div className="row">
           {this.state.cities.map((ville) => {
             return (
-              <Link to={"/Hotels/" + ville.slug}>
-                {(this.props.src === "/img/paris.png") ?
-                  (<div className="col-sm-6 col-md-6"><CityCard src={ville.source} slug={ville.slug} name={ville.name}></CityCard></div>) :
-                  (<div className="col-sm-6 col-md-4 col-lg-3"> <CityCard src={ville.source} slug={ville.slug} name={ville.name}></CityCard></div>)}
-              </Link>
-
+              <div className="col-sm-12 col-md-4 ">
+                <Link to={"/Hotels/" + ville.slug}><CityCard src={ville.source} slug={ville.slug} name={ville.name} /></Link></div>
             )
           })}
         </div>
       </div>
+
     );
   }
 }

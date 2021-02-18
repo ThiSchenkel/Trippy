@@ -8,7 +8,7 @@ import Signup from "../views/Signup";
 import styled from "styled-components"; //installation du styled-components
 
 const StyleNavBar = styled.div`
-  background: #990000;
+
   color: #767676;
 `;
 
@@ -53,7 +53,6 @@ class NavBar extends React.Component {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link className="nav-link active" to="/Hotels/">
-                    {" "}
                     <StyleLink>Hotels</StyleLink>
                   </Link>
                 </li>
@@ -81,9 +80,7 @@ class NavBar extends React.Component {
           <Route path="/HomePage/">
             <Home />
           </Route>
-          <Route path="/Hotels/">
-            <Hotels />
-          </Route>
+          <Route path="/Hotels/:city" component={Hotels}></Route>
           <Route path="/Restaurants/">
             <Hotels />
           </Route>
