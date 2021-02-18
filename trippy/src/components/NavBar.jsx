@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "../views/Home";
+import HotelPage from "../views/HotelPage";
 import Hotels from "../views/Hotels";
 import Login from "../views/Login";
 import Signup from "../views/Signup";
+import Error404 from "../views/Error404";
 // import "./App.css";
 import styled from "styled-components"; //installation du styled-components
 
@@ -52,23 +54,22 @@ class NavBar extends React.Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/Hotels/">
-                    {" "}
+                  <Link className="nav-link active" to="/Hotels">
                     <StyleLink>Hotels</StyleLink>
                   </Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="/Restaurants/">
+                  <Link className="nav-link" to="/Restaurants">
                     <StyleLink>Restaurants</StyleLink>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Login/">
+                  <Link className="nav-link" to="/Login">
                     <StyleLink>Login</StyleLink>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Signup/">
+                  <Link className="nav-link" to="/Signup">
                     <StyleLink>Signup</StyleLink>
                   </Link>
                 </li>
@@ -78,14 +79,15 @@ class NavBar extends React.Component {
         </div>
 
         <Switch>
-          <Route path="/HomePage/">
+          <Route path="/HomePage">
             <Home />
           </Route>
           <Route path="/Hotels/:city" component={Hotels}></Route>
-          <Route path="/Restaurants/">
+          <Route path="/Hotel/:id" component={HotelPage}></Route>
+          <Route path="/Restaurants">
             <Hotels />
           </Route>
-          <Route path="/Login/">
+          <Route path="/Login">
             <Login />
           </Route>
           <Route path="/Signup">

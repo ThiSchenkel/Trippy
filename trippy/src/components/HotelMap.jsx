@@ -1,5 +1,4 @@
 import React from "react";
-// import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import HotelMarker from "../components/HotelMarker";
 

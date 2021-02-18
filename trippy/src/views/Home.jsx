@@ -27,11 +27,12 @@ class Home extends React.Component {
       <div>
         {this.state.cities.map((ville) => {
           return (
-            <Link to={"/Hotels/" + ville.slug}>
+            <Link to={`/Hotels/${ville.slug}`}>
               <CityCard
                 src={ville.source}
                 slug={ville.slug}
                 name={ville.name}
+                id={ville._id}
               ></CityCard>
             </Link>
           );

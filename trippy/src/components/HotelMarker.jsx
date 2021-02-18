@@ -5,7 +5,7 @@ class HotelMarker extends React.Component {
   render() {
     return (
       <Popup>
-        <p>{this.props.price}</p>
+        <p>{this.props.price}$</p>
       </Popup>
     );
   }
