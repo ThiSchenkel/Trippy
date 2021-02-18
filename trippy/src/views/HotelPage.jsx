@@ -4,7 +4,6 @@ import ImageGallery from "react-image-gallery";
 import Card from "../components/HotelInfo/Card";
 import Gallery from "../components/HotelInfo/Gallery";
 import MapHotel from "../components/HotelInfo/MapHotel";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 
 class HotelPage extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class HotelPage extends React.Component {
     this.state = {
       hotel: "",
       location: {
-        lat: 0,
+        lat: 48,
         lon: 0,
       },
       commodities: [],
@@ -24,11 +23,7 @@ class HotelPage extends React.Component {
   }
 
   componentDidMount() {
-    console.log("Hello");
-
-    fetch(`http://localhost:3002/api/hotels/${this.props.match.params.id}`);
-    console
-      .log(this.props.match.params.id)
+    fetch(`http://localhost:3002/api/hotels/${this.props.match.params.id}`)
       .then((response) => response.json())
       .then((data) => {
         this.setState({

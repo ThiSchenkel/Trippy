@@ -9,12 +9,8 @@
     "leaflet": "^1.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-<<<<<<< HEAD
     "react-image-gallery": "^1.0.8",
     "react-leaflet": "^2.7.0",
-=======
-    "react-leaflet": "^2.8.0",
->>>>>>> 84f634433d0df517bd0e853c5448b1f36bbe06fe
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "styled-components": "^5.2.1",
