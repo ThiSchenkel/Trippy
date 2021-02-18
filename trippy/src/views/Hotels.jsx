@@ -38,7 +38,7 @@ class Hotels extends React.Component {
           <HotelMap
             latitude={this.state.location.lat}
             longitude={this.state.location.lon}
-            price={this.state.hotels.price}
+            hotelPosition={this.state.hotels}
           ></HotelMap>
         </div>
         <div>

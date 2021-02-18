@@ -1,6 +1,7 @@
 import React from "react";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import HotelMarker from "../components/HotelMarker";
 
 class HotelMap extends React.Component {
   render() {
@@ -16,11 +17,20 @@ class HotelMap extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[this.props.latitude, this.props.longitude]}>
-            <Popup>
-              <p>{this.props.price}</p>
-            </Popup>
-          </Marker>
+          {this.props.hotelPosition
+            ? this.props.hotelPosition.map((hotelMarker) => {
+                return (
+                  <Marker
+                    position={[
+                      hotelMarker.location.lat,
+                      hotelMarker.location.lon,
+                    ]}
+                  >
+                    <HotelMarker price={hotelMarker.price}></HotelMarker>
+                  </Marker>
+                );
+              })
+            : null}
         </Map>
       </div>
     );
