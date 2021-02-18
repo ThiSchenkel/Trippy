@@ -3,7 +3,6 @@ import React from "react";
 import ImageGallery from "react-image-gallery";
 import Card from "../components/HotelInfo/Card";
 import Gallery from "../components/HotelInfo/Gallery";
-import MapHotel from "../components/HotelInfo/MapHotel";
 
 class HotelPage extends React.Component {
   constructor(props) {
@@ -11,14 +10,16 @@ class HotelPage extends React.Component {
     this.state = {
       hotel: "",
       location: {
-        lat: 48,
+        lat: 0,
         lon: 0,
       },
-      commodities: [],
-      images: {
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
-      },
+      commodities: "",
+      images: [
+        {
+          original: "https://picsum.photos/id/1018/1000/600/",
+          thumbnail: "https://picsum.photos/id/1018/1000/600/",
+        },
+      ],
     };
   }
 
@@ -27,12 +28,17 @@ class HotelPage extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({
-          hotels: data.results,
-          location: data.results.location,
-          commodities: data.results.commodities,
-          images: data.results.pictures,
+          images: data.result.pictures.map((pic) => {
+            return {
+              original: pic,
+              thumbnail: pic,
+            };
+          }),
+          hotel: data.result,
+          location: data.result.location,
+          commodities: data.result.commodities,
         });
-        console.log(this.state.hotels, "state");
+        console.log(this.state.hotel, "state");
         console.log(this.state.location, "state");
         console.log(this.state.commodities, "state");
         console.log(this.state.images, "state");
@@ -42,17 +48,27 @@ class HotelPage extends React.Component {
   render() {
     return (
       <div>
-        <Gallery images={this.state.image}></Gallery>
+        <h1>helooooo</h1>
+
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <Gallery images={this.state.images}></Gallery>
+            </div>
+          </div>
+        </div>
+
         <Card
           name={this.state.hotel.name}
           price={this.state.hotel.price}
           address={this.state.hotel.address}
           rating={this.state.hotel.stars}
+          commodities={this.state.commodities}
+          lat={this.state.location.lat}
+          lon={this.state.location.lon}
+          popAddresse={this.state.hotel.address}
+          popPrice={this.state.hotel.price}
         ></Card>
-        <MapHotel
-          latitude={this.state.location.lat}
-          longitude={this.state.location.lon}
-        ></MapHotel>
       </div>
     );
   }
