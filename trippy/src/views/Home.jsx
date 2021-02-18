@@ -24,7 +24,7 @@ class Home extends React.Component {
       return <h1>Loading </h1>;
     }
     return (
-      <div>
+      <>
         {this.state.cities.map((ville) => {
           return (
             <Link to={`/Hotels/${ville.slug}`}>
@@ -37,7 +37,7 @@ class Home extends React.Component {
             </Link>
           );
         })}
-      </div>
+      </>
     );
   }
 }
