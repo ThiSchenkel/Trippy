@@ -45,7 +45,7 @@ class Hotels extends React.Component {
           {this.state.hotels.map((hotel) => {
             return (
               <HotelCard
-                pictures={"http://localhost:3000/" + hotel.pictures[0]}
+                pictures={hotel.pictures[0]}
                 name={hotel.name}
                 price={hotel.price}
                 rating={hotel.stars}

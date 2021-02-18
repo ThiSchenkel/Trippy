@@ -10,7 +10,11 @@ class HotelCard extends React.Component {
             src={this.props.pictures}
             alt={this.props.name}
             style={{ width: "300px" }}
-          />
+            onError={(e) => {
+              e.target.onerror = null
+              e.target.src = "http://via.placeholder.com/300x200"
+            }
+            } />
         </div>
         <div>
           <p>{this.props.name}</p>
