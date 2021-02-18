@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "../views/Home";
 import HotelPage from "../views/HotelPage";
-import App from "./";
+import Hotels from "../views/Hotels";
 import Login from "../views/Login";
 import Signup from "../views/Signup";
 import Error404 from "../views/Error404";
@@ -82,7 +82,7 @@ class NavBar extends React.Component {
           <Route path="/HomePage">
             <Home />
           </Route>
-          <Route path="/Hotels/:city" component={App}></Route>
+          <Route path="/Hotels/:city" component={Hotels}></Route>
           <Route path="/Hotel/:id" component={HotelPage}></Route>
           <Route path="/Restaurants">
             <Hotels />
