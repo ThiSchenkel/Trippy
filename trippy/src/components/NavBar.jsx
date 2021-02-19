@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Principale from "../views/Principale";
 import Home from "../views/Home";
 import HotelPage from "../views/HotelPage";
 import Hotels from "../views/Hotels";
@@ -28,7 +29,7 @@ class NavBar extends React.Component {
             <Link
               className="navbar-brand"
               style={{ fontSize: "30px" }}
-              to="/HomePage"
+              to="/"
             >
               <span
                 className="material-icons"
@@ -53,11 +54,26 @@ class NavBar extends React.Component {
 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
+
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/HomePage">
+                    <StyleLink>HomePage</StyleLink>
+                  </Link>
+                </li>
+
                 <li className="nav-item">
                   <Link className="nav-link active" to="/Hotels">
                     <StyleLink>Hotels</StyleLink>
                   </Link>
                 </li>
+
+
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/" />
+
+                </li>
+
+
                 <li class="nav-item">
                   <Link className="nav-link" to="/Restaurants">
                     <StyleLink>Restaurants</StyleLink>
@@ -79,13 +95,11 @@ class NavBar extends React.Component {
         </div>
 
         <Switch>
-          <Route path exact="/HomePage">
-            <Home />
-          </Route>
-
+          <Route exact path="/" component={Principale} />
           <Route path="/HomePage">
             <Home />
           </Route>
+
           <Route path="/Hotels/:city" component={Hotels}></Route>
           <Route path="/Hotel/:id" component={HotelPage}></Route>
 
