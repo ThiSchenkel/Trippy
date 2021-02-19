@@ -7,12 +7,12 @@ class CityCard extends React.Component {
     console.log(this.props.src);
     return (
       <>
-          <div className="card mb-5">
-            <img src={src} alt={this.props.slug} className="card-img-top" />
-            <div className="card-body">
-              <h5 className="card-title text-center fs-3">{this.props.name}</h5>
-            </div>
+        <div className="card mb-5">
+          <img src={src} alt={this.props.slug} className="card-img-top" />
+          <div className="card-body">
+            <h5 className="card-title text-center">{this.props.name}</h5>
           </div>
+        </div>
       </>
     );
   }

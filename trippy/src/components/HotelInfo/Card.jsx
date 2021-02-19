@@ -1,17 +1,25 @@
 import React from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import StarsRating from "stars-rating";
 
 class Card extends React.Component {
   render() {
     return (
       <div>
         <div>
-          <p>{this.props.name}</p>
-          <p>{this.props.address}</p>
-          <p>{this.props.price}</p>
-          <p>{this.props.rating}</p>
-          <p>{this.props.commodities}</p>
+          <h3>{this.props.name}</h3>
+          <h5>Address: {this.props.address}</h5>
+          <h5>Prix : {this.props.price}€/Nuit</h5>
+          <StarsRating
+            count={5}
+            size={24}
+            value={this.props.rating}
+            edit={false}
+            color2={"#ffd700"}
+          />
         </div>
+        <p>{this.props.commodities}</p>
+
         <div class="grid-container"></div>
         <div className="row">
           <div className="col-12">

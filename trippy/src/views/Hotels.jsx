@@ -46,7 +46,10 @@ class Hotels extends React.Component {
         <div class="wrapper">
           {this.state.hotels.map((hotel) => {
             return (
-              <Link to={`/Hotel/${hotel._id}`}>
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/Hotel/${hotel._id}`}
+              >
                 <HotelCard
                   pictures={hotel.pictures[0]}
                   name={hotel.name}

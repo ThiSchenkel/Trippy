@@ -6,7 +6,6 @@ import getHomeData from "../utils/Api";
 import CityCard from "../components/CityCard";
 import "./Home.css";
 
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -23,11 +22,16 @@ class Home extends React.Component {
 
   render() {
     if (this.state.cities.length === 0) {
-      return <h1>Loading </h1>;
+      return (
+        <h1 style={{ textAlign: "center", paddingTop: "46px" }}>Loading </h1>
+      );
     }
     return (
       <>
-        <section id="header" className="jumbotron d-flex align-items-center justify-content-center">
+        <section
+          id="header"
+          className="jumbotron d-flex align-items-center justify-content-center"
+        >
           <h1 className="display-3 text-white">Découvrez le monde</h1>
         </section>
         <div>
@@ -35,7 +39,10 @@ class Home extends React.Component {
           <div className="d-flex justify-content-around flex-wrap">
             {this.state.cities.map((ville) => {
               return (
-                <Link to={`/Hotels/${ville.slug}`}>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to={`/Hotels/${ville.slug}`}
+                >
                   <CityCard
                     src={ville.source}
                     slug={ville.slug}

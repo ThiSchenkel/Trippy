@@ -1,15 +1,22 @@
 body {
-  font-family: 'Gudea', sans-serif;
+  font-family: "Gudea", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, label {
-  font-family: 'Rancho', cursive;
-  color : #2a2a2a;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+P,
+label {
+  font-family: "Rancho", cursive;
+  color: #2a2a2a;
   font-weight: 400;
 }
 
-img { 
-  width : 100%;
+img {
+  width: 100%;
 }
 
 .navbar {

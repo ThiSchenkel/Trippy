@@ -6,6 +6,7 @@ import Hotels from "../views/Hotels";
 import Login from "../views/Login";
 import Signup from "../views/Signup";
 import Error404 from "../views/Error404";
+import Restaurants from "../views/Restaurants";
 // import "./App.css";
 import styled from "styled-components"; //installation du styled-components
 
@@ -78,19 +79,27 @@ class NavBar extends React.Component {
         </div>
 
         <Switch>
+          <Route path exact="/HomePage">
+            <Home />
+          </Route>
+
           <Route path="/HomePage">
             <Home />
           </Route>
           <Route path="/Hotels/:city" component={Hotels}></Route>
           <Route path="/Hotel/:id" component={HotelPage}></Route>
+
           <Route path="/Restaurants">
-            <Hotels />
+            <Restaurants />
           </Route>
           <Route path="/Login">
             <Login />
           </Route>
           <Route path="/Signup">
             <Signup />
+          </Route>
+          <Route path="*">
+            <Error404 />
           </Route>
         </Switch>
       </BrowserRouter>

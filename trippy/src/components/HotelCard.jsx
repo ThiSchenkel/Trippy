@@ -17,7 +17,8 @@ class HotelCard extends React.Component {
           />
         </div>
         <div>
-          <p>{this.props.name}</p>
+          <h3>{this.props.name}</h3>
+          <h3>Prix : {this.props.price}€/Nuit</h3>
           <StarsRating
             count={5}
             size={24}
@@ -25,7 +26,6 @@ class HotelCard extends React.Component {
             edit={false}
             color2={"#ffd700"}
           />
-          <p>{this.props.price}</p>
         </div>
       </div>
     );

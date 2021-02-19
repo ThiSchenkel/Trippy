@@ -48,15 +48,14 @@ class HotelPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>helooooo</h1>
+        <h1 style={{ textAlign: "center ", paddingTop: "36px" }}>
+          Bienvenue chez {this.state.hotel.name}
+        </h1>
 
         <div className="container">
-          <div className="row">
-            <div className="col-6">
-              <Gallery images={this.state.images}></Gallery>
-            </div>
-          </div>
+          <Gallery images={this.state.images}></Gallery>
         </div>
+
         <Commodities commodities={this.state.commodities}></Commodities>
         <Card
           name={this.state.hotel.name}
