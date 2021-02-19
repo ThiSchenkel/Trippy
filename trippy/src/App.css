@@ -21,7 +21,9 @@ img {
 
 .navbar {
   padding: 0;
+  background: linear-gradient(0.25turn, #2f727e, #ebf8e1, #f69d3c);
 }
+
 .videoIndex {
   background-size: cover;
   position: fixed;

@@ -1,7 +1,6 @@
 import React from "react";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Card from "../components/HotelInfo/Card";
-import Gallery from "../components/HotelInfo/Gallery";
 import Commodities from "../components/HotelInfo/Commodities";
 
 class HotelPage extends React.Component {
@@ -52,10 +51,6 @@ class HotelPage extends React.Component {
           Bienvenue chez {this.state.hotel.name}
         </h1>
 
-        <div className="container">
-          <Gallery images={this.state.images}></Gallery>
-        </div>
-
         <Commodities commodities={this.state.commodities}></Commodities>
         <Card
           name={this.state.hotel.name}
@@ -73,3 +68,7 @@ class HotelPage extends React.Component {
 }
 
 export default HotelPage;
+//import Gallery from "../components/HotelInfo/Gallery";
+//<div className="container">
+//  <Gallery images={this.state.images}></Gallery>
+//</div>;

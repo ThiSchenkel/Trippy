@@ -57,6 +57,7 @@ class Hotels extends React.Component {
                   price={hotel.price}
                   rating={hotel.stars}
                   address={hotel.address}
+                  rooms={hotel.rooms}
                 ></HotelCard>
               </Link>
             );

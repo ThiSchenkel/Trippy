@@ -23,7 +23,9 @@ class HotelCard extends React.Component {
                   />
                 </p>
                 <h4 class="card-title">{this.props.name}</h4>
-                <p class="card-text">{this.props.name}</p>
+                <h4 class="card-text">
+                  {this.props.rooms.length} Rooms Are Available
+                </h4>
               </div>
             </div>
           </div>

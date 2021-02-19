@@ -5,7 +5,7 @@ class Commodities extends React.Component {
     return (
       <div>
         {this.props.commodities.map((icons) => {
-          return <p>{icons}</p>;
+          return <button>{icons}</button>;
         })}
       </div>
     );
