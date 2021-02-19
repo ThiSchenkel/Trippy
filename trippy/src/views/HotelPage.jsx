@@ -55,6 +55,9 @@ class HotelPage extends React.Component {
         <div className="container">
           <Gallery images={this.state.images}></Gallery>
         </div>
+        <div className="p-5">
+          <Commodities commodities={this.state.commodities}></Commodities>
+        </div>
 
         <Card
           name={this.state.hotel.name}
@@ -68,7 +71,6 @@ class HotelPage extends React.Component {
           popAddress={this.state.hotel.address}
           popPrice={this.state.hotel.price}
         ></Card>
-        <Commodities commodities={this.state.commodities}></Commodities>
       </>
     );
   }

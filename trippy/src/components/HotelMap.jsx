@@ -27,7 +27,10 @@ class HotelMap extends React.Component {
                         hotelMarker.location.lon,
                       ]}
                     >
-                      <HotelMarker price={hotelMarker.price}></HotelMarker>
+                      <HotelMarker
+                        price={hotelMarker.price}
+                        address={hotelMarker.address}
+                      ></HotelMarker>
                     </Marker>
                   );
                 })
