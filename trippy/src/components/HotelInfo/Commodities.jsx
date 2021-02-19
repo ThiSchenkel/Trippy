@@ -3,11 +3,11 @@ import React from "react";
 class Commodities extends React.Component {
   render() {
     return (
-      <p>
+      <div>
         {this.props.commodities.map((icons) => {
           return <p>{icons}</p>;
         })}
-      </p>
+      </div>
     );
   }
 }

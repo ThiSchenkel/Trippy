@@ -22,3 +22,7 @@ img {
 .navbar {
   padding: 0;
 }
+.videoIndex {
+  background-size: cover;
+  position: fixed;
+}

@@ -79,7 +79,7 @@ class NavBar extends React.Component {
         </div>
 
         <Switch>
-          <Route path exact="/HomePage">
+          <Route path exact="/">
             <Home />
           </Route>
 
