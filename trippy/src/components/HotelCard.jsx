@@ -12,7 +12,8 @@ class HotelCard extends React.Component {
             style={{ width: "300px" }}
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = "http://via.placeholder.com/300x200";
+              e.target.src =
+                "https://www.kanuhura.com/sites/default/files/styles/720x460/public/externals/Kanuhura_aerial__57_-1600x1199-1101bbee-2c98-4d6b-8b01-4c10adad8f84.jpg?itok=FCq_mrJL";
             }}
           />
         </div>
