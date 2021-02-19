@@ -31,7 +31,7 @@ class Home extends React.Component {
           <h1 className="display-3 text-white">Découvrez le monde</h1>
         </section>
         <div>
-          <h2 className="text-center mb-5">Choisissez une destination</h2>
+          <h2 className="text-center mb-5 fs-1">Choisissez une destination</h2>
           <div className="d-flex justify-content-around flex-wrap">
             {this.state.cities.map((ville) => {
               return (
