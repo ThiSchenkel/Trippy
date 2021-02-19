@@ -6,30 +6,17 @@ class CityCard extends React.Component {
     const src = "http://localhost:3002" + this.props.src;
     console.log(this.props.src);
     return (
-      <div className="container">
-        <div className="row">
-          {this.props.src === "/img/paris.png" ? (
-            <div className="col">
-              <img
-                src="http://localhost:3002/img/paris.png"
-                class="card-img-top"
-                alt={this.props.slug}
-              />
-              <p class="card-text">
-                <span>{this.props.name}</span>
-              </p>
+      <>
+          <div className="card">
+            <img src={src} alt={this.props.slug} className="card-img-top" />
+            <div className="card-body">
+              <h5 className="card-title">{this.props.name}</h5>
             </div>
-          ) : (
-            <div className="col-sm-4 col-md-4">
-              <img src={src} class="card-img-top" alt={this.props.slug} />
-              <p class="card-text">
-                <span>{this.props.name}</span>
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
+          </div>
+      </>
     );
   }
 }
 export default CityCard;
+
+
