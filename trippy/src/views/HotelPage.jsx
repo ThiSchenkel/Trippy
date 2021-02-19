@@ -48,7 +48,7 @@ class HotelPage extends React.Component {
     return (
       <div>
         <h1 style={{ textAlign: "center ", paddingTop: "36px" }}>
-          Bienvenue chez {this.state.hotel.name}
+          Bienvenue Chez {this.state.hotel.name}
         </h1>
 
         <Commodities commodities={this.state.commodities}></Commodities>
