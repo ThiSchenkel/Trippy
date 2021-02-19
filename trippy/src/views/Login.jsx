@@ -19,27 +19,27 @@ class Login extends React.Component {
             <input
               type="email"
               id="inputEmail"
-              class="form-control"
+              className="form-control mb-3"
               placeholder="Email address"
               required=""
               autofocus=""
             />
-            <label for="inputPassword" class="visually-hidden">
+            <label for="inputPassword" className="visually-hidden">
               Password
             </label>
             <input
               type="password"
               id="inputPassword"
-              class="form-control"
+              className="form-control mb-3"
               placeholder="Password"
               required=""
             />
-            <div class="checkbox mb-3">
+            <div className="checkbox mb-3">
               <label>
                 <input type="checkbox" value="remember-me" /> Remember me
               </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">
+            <button className="w-100 btn btn-lg btn-primary" type="submit">
               Login
             </button>
           </form>

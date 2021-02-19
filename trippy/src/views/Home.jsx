@@ -28,21 +28,24 @@ class Home extends React.Component {
     return (
       <>
         <section id="header" className="jumbotron d-flex align-items-center justify-content-center">
-          <h1 className="display-3 text-white">Découvrir le monde</h1>
+          <h1 className="display-3 text-white">Découvrez le monde</h1>
         </section>
-        <div className="d-flex justify-content-center flex-wrap">
-        {this.state.cities.map((ville) => {
-          return (
-            <Link to={`/Hotels/${ville.slug}`}>
-              <CityCard
-                src={ville.source}
-                slug={ville.slug}
-                name={ville.name}
-                id={ville._id}
-              ></CityCard>
-            </Link>
-          );
-        })}
+        <div>
+          <h2 className="text-center mb-5">Choisissez une destination</h2>
+          <div className="d-flex justify-content-around flex-wrap">
+            {this.state.cities.map((ville) => {
+              return (
+                <Link to={`/Hotels/${ville.slug}`}>
+                  <CityCard
+                    src={ville.source}
+                    slug={ville.slug}
+                    name={ville.name}
+                    id={ville._id}
+                  ></CityCard>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </>
     );
