@@ -10,7 +10,7 @@ class CityCard extends React.Component {
           <div className="card">
             <img src={src} alt={this.props.slug} className="card-img-top" />
             <div className="card-body">
-              <h5 className="card-title">{this.props.name}</h5>
+              <h5 className="card-title text-center">{this.props.name}</h5>
             </div>
           </div>
       </>

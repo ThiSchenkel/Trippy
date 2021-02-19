@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import getHomeData from "../utils/Api";
 import CityCard from "../components/CityCard";
-import "../components/CityCard.css";
+import "./Home.css";
 
 
 class Home extends React.Component {
@@ -27,9 +27,8 @@ class Home extends React.Component {
     }
     return (
       <>
-        <section id="header" className="jumbotron text-center">
-          <h1 className="display-3">Découvrir le monde</h1>
-          <h2>Paris</h2>
+        <section id="header" className="jumbotron d-flex align-items-center justify-content-center">
+          <h1 className="display-3 text-white">Découvrir le monde</h1>
         </section>
         <div className="d-flex justify-content-center flex-wrap">
         {this.state.cities.map((ville) => {
