@@ -43,7 +43,7 @@ class Hotels extends React.Component {
             hotelPosition={this.state.hotels}
           ></HotelMap>
         </div>
-        <div class="wrapper">
+        <div className="d-flex justify-content-around flex-wrap p-5">
           {this.state.hotels.map((hotel) => {
             return (
               <Link
@@ -56,6 +56,7 @@ class Hotels extends React.Component {
                   id={hotel._id}
                   price={hotel.price}
                   rating={hotel.stars}
+                  address={hotel.address}
                 ></HotelCard>
               </Link>
             );
