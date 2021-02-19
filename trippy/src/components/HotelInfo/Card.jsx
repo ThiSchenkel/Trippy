@@ -10,6 +10,7 @@ class Card extends React.Component {
           <h3>{this.props.name}</h3>
           <h5>Address: {this.props.address}</h5>
           <h5>Prix : {this.props.price}€/Nuit</h5>
+          <h5>phone : {this.props.phone}</h5>
           <StarsRating
             count={5}
             size={24}

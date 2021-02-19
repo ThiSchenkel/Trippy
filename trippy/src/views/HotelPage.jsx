@@ -57,6 +57,7 @@ class HotelPage extends React.Component {
           price={this.state.hotel.price}
           address={this.state.hotel.address}
           rating={this.state.hotel.stars}
+          phone={this.state.hotel.phone}
           lat={this.state.location.lat}
           lon={this.state.location.lon}
           popAddresse={this.state.hotel.address}
