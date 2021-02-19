@@ -4,8 +4,14 @@ body {
   
 }
 
+.videoIndex {
+  background-size: cover;
+  position: fixed;
+}
+
+
 h1{
-    color : #2a2a2a;
+    color : #2f727e;
     font-weight: 400;
     text-align: center;
     padding: 30px;
@@ -20,5 +26,5 @@ img{
 }
 
 .navbar{
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background: linear-gradient(0.25turn, #2f727e, #ebf8e1, #f69d3c);
 }

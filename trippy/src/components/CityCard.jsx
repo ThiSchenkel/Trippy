@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 const StyleLinkP = styled.p`
-  color: #2a2a2a;
+  color: #2f727e;
   text-align : center;
 `;
 

@@ -8,7 +8,6 @@ import Signup from "../views/Signup";
 import styled from "styled-components"; //installation du styled-components
 
 const StyleNavBar = styled.div`
-
   color: #767676;
 `;
 
@@ -25,7 +24,7 @@ class NavBar extends React.Component {
           <StyleNavBar className="container-fluid">
             <Link
               className="navbar-brand"
-              style={{ fontSize: "30px" }}
+              style={{ fontSize: "30px", marginLeft: "100px" }}
               to="/HomePage"
             >
               <span
