@@ -7,7 +7,7 @@ class HotelMap extends React.Component {
     return (
       <div>
         <Map
-          style={{ height: "50vh", width: "100%" }}
+          style={{ width: "100%" }}
           center={[this.props.latitude, this.props.longitude]}
           zoom={10}
           scrollWheelZoom={false}

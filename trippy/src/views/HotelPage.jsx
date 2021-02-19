@@ -1,8 +1,8 @@
 import React from "react";
 // import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import ImageGallery from "react-image-gallery";
 import Card from "../components/HotelInfo/Card";
 import Gallery from "../components/HotelInfo/Gallery";
+import Commodities from "../components/HotelInfo/Commodities";
 
 class HotelPage extends React.Component {
   constructor(props) {
@@ -13,11 +13,11 @@ class HotelPage extends React.Component {
         lat: 0,
         lon: 0,
       },
-      commodities: "",
+      commodities: [],
       images: [
         {
-          original: "https://picsum.photos/id/1018/1000/600/",
-          thumbnail: "https://picsum.photos/id/1018/1000/600/",
+          original: "https://picsum.photos/id/1019/1000/600/",
+          thumbnail: "https://picsum.photos/id/1019/250/150/",
         },
       ],
     };
@@ -57,13 +57,12 @@ class HotelPage extends React.Component {
             </div>
           </div>
         </div>
-
+        <Commodities commodities={this.state.commodities}></Commodities>
         <Card
           name={this.state.hotel.name}
           price={this.state.hotel.price}
           address={this.state.hotel.address}
           rating={this.state.hotel.stars}
-          commodities={this.state.commodities}
           lat={this.state.location.lat}
           lon={this.state.location.lon}
           popAddresse={this.state.hotel.address}

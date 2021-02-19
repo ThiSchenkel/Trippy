@@ -3,6 +3,7 @@ import React from "react";
 import HotelCard from "../components/HotelCard";
 import HotelMap from "../components/HotelMap";
 import { Link } from "react-router-dom";
+import "../components/HotelCard.css";
 
 class Hotels extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class Hotels extends React.Component {
             hotelPosition={this.state.hotels}
           ></HotelMap>
         </div>
-        <div>
+        <div class="wrapper">
           {this.state.hotels.map((hotel) => {
             return (
               <Link to={`/Hotel/${hotel._id}`}>

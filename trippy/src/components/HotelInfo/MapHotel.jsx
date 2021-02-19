@@ -8,7 +8,7 @@ class MapHotel extends React.Component {
         <Map
           center={[this.props.latitude, this.props.longitude]}
           zoom={12}
-          style={{ height: "400px" }}
+          style={{ height: "50vh", width: "100%" }}
         >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

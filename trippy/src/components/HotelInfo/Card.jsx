@@ -10,6 +10,7 @@ class Card extends React.Component {
           <p>{this.props.address}</p>
           <p>{this.props.price}</p>
           <p>{this.props.rating}</p>
+          <p>{this.props.commodities}</p>
         </div>
         <div class="grid-container"></div>
         <div className="row">
