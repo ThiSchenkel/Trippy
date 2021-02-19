@@ -13,7 +13,7 @@ class Signup extends React.Component {
         style={{ width: "300px", justifyContent: "center" }}
       >
         <h1 className="pt-5" style={{ fontSize: "50px", textAlign: "center" }}>
-          Signup
+          Sign up
         </h1>
       </div>
     );

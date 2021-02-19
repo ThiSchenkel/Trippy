@@ -1,4 +1,5 @@
 import React from "react";
+import StarsRating from "stars-rating";
 
 class HotelCard extends React.Component {
   render() {
@@ -17,8 +18,14 @@ class HotelCard extends React.Component {
         </div>
         <div>
           <p>{this.props.name}</p>
+          <StarsRating
+            count={5}
+            size={24}
+            value={this.props.rating}
+            edit={false}
+            color2={"#ffd700"}
+          />
           <p>{this.props.price}</p>
-          <p>{this.props.rating}</p>
         </div>
       </div>
     );

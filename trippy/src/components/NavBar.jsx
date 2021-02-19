@@ -10,7 +10,6 @@ import Error404 from "../views/Error404";
 import styled from "styled-components"; //installation du styled-components
 
 const StyleNavBar = styled.div`
-  background: #00a64a;
   color: #767676;
 `;
 
@@ -23,7 +22,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="navbar navbar-expand-md navbar-light bg-light">
+        <div className="navbar navbar-expand-md navbar-light bg-dark">
           <StyleNavBar className="container-fluid">
             <Link
               className="navbar-brand"
@@ -70,7 +69,7 @@ class NavBar extends React.Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/Signup">
-                    <StyleLink>Signup</StyleLink>
+                    <StyleLink>Sign up</StyleLink>
                   </Link>
                 </li>
               </ul>
