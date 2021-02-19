@@ -20,6 +20,7 @@ class HotelPage extends React.Component {
           thumbnail: "https://picsum.photos/id/1019/250/150/",
         },
       ],
+      picture: "https://picsum.photos/id/1019/250/150/",
     };
   }
 
@@ -38,35 +39,34 @@ class HotelPage extends React.Component {
           location: data.result.location,
           commodities: data.result.commodities,
         });
-        console.log(this.state.hotel, "state");
-        console.log(this.state.location, "state");
-        console.log(this.state.commodities, "state");
-        console.log(this.state.images, "state");
+        console.log("state hotel", this.state.hotel);
+        console.log("state location", this.state.location);
+        console.log("state commodities", this.state.commodities);
+        console.log("state images", this.state.images);
       });
   }
 
   render() {
     return (
-      <div>
-        <h1 style={{ textAlign: "center ", paddingTop: "36px" }}>
-          Bienvenue Chez {this.state.hotel.name}
+      <>
+        <h1 style={{ textAlign: "center ", padding: "36px" }}>
+          Bienvenue chez {this.state.hotel.name}
         </h1>
-        <div className="container">
-          <Gallery images={this.state.images}></Gallery>
-        </div>
-        ;<Commodities commodities={this.state.commodities}></Commodities>
+
         <Card
           name={this.state.hotel.name}
+          image={this.state.picture}
           price={this.state.hotel.price}
           address={this.state.hotel.address}
           rating={this.state.hotel.stars}
           phone={this.state.hotel.phone}
           lat={this.state.location.lat}
           lon={this.state.location.lon}
-          popAddresse={this.state.hotel.address}
+          popAddress={this.state.hotel.address}
           popPrice={this.state.hotel.price}
         ></Card>
-      </div>
+        <Commodities commodities={this.state.commodities}></Commodities>
+      </>
     );
   }
 }

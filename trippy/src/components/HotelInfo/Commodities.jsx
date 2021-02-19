@@ -4,7 +4,7 @@ class Commodities extends React.Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <h1 className="p-5">Commodities</h1>
+        <h1 className="p-3 ">Commodities</h1>
         {this.props.commodities.map((icons) => {
           return (
             <span
@@ -15,6 +15,7 @@ class Commodities extends React.Component {
                 display: "inline-block",
                 borderRadius: "16px",
                 marginBottom: "4px",
+                margin: "6px",
               }}
             >
               {icons}
