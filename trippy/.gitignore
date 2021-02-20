@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /public/img/hotels
+/public/video/Dubrovnik12866.mp4
 
 # testing
 /coverage
